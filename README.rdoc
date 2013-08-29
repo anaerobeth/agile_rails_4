@@ -1,11 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dummy generated readme from "rails new".  There's not really anything
+interesting in here yet since I don't know what I'm doing (yet).
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.0.0, although 1.9.3 will probably work
 
 * System dependencies
 
