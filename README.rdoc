@@ -3,6 +3,11 @@
 Dummy generated readme from "rails new".  There's not really anything
 interesting in here yet since I don't know what I'm doing (yet).
 
+The secret_token.rb file has been removed and I've regenerated the key on my end.
+You'll need to copy config/initializers/secret_token.rb from some other rails app
+if you want to use any of this code.  There's probably a better way to deal with
+this situation, and if I figure out what that is I'll use that approach instead.
+
 Things you may want to cover:
 
 * Ruby version: 2.0.0, although 1.9.3 will probably work
