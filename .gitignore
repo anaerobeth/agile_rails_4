@@ -17,3 +17,6 @@
 
 # Ignore mac droppings
 .DS_Store
+
+# Ignore secret_token.rb
+secret_token.rb
