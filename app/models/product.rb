@@ -16,4 +16,10 @@ class Product < ActiveRecord::Base
     with: /\.(gif|jpg|png)\Z/i,
     message: 'must be a URL for a GIF, JPG, or PNG image.'
   }
+
+  #Let's try validating that the description is at least 10 chars
+  validates :description, allow_blank: true, length: {
+    minimum: 10,
+    message: 'is too short - it must be at least 10 characters long'
+  }
 end

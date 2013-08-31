@@ -20,7 +20,7 @@ class ProductTest < ActiveSupport::TestCase
   test "product price must be positive" do
     product = Product.new
     product.title = "Foo"
-    product.description = "More Foo"
+    product.description = "More Foo For You"
     product.image_url = "foo.jpg"
 
     [-1, 0].each do |price|
@@ -37,7 +37,7 @@ class ProductTest < ActiveSupport::TestCase
   test "product image url must be a png, gif, or jpg" do
     product = Product.new( 
       title: "Foo", 
-      description: "More Foo", 
+      description: "More Foo For You", 
       price: 9.99)
 
     ["foo.jpg", "foo.PNG", "foo.gIf", "http://yay.com/x/y/z.gif"].each do |img|
@@ -55,13 +55,27 @@ class ProductTest < ActiveSupport::TestCase
   test "product title must be unique" do
     product = Product.new(
       title: products(:foo).title,
-      description: "test",
+      description: "test test test",
       price: 1,
       image_url: "foo.png")
     assert product.invalid?
     assert_equal ["has already been taken"], product.errors[:title]
     #it would be better to look up the error message rather than
     #hardcoding it.  That's not until chapter 15.
+  end
+
+  test "product description must be at least 10 chars" do
+    product = Product.new(
+      title: "A title",
+      description: "short",
+      price: 1,
+      image_url: "foo.png")
+
+    assert product.invalid?, "'#{product.description}'' should be too short for a description"
+
+    product.description = "This is a valid description"
+
+    assert product.valid?, "'#{product.description}' should be a valid product description"
   end
 
 end
