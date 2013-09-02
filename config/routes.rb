@@ -1,4 +1,5 @@
 AgileRails4::Application.routes.draw do
+  get "store/index"
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -6,6 +7,8 @@ AgileRails4::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
+  root 'store#index', as: 'store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

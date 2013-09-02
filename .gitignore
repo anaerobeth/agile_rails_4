@@ -20,6 +20,3 @@
 
 # Ignore secret_token.rb
 secret_token.rb
-
-#ignore bin
-/bin
