@@ -22,4 +22,9 @@ class Product < ActiveRecord::Base
     minimum: 10,
     message: 'is too short - it must be at least 10 characters long'
   }
+
+  def self.latest
+    Product.order(:updated_at).last
+  end
+  
 end
