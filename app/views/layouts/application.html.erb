@@ -13,6 +13,11 @@
   </div>
   <div id="columns">
     <div id="side">
+      <% if @cart %>
+        <div id="cart">
+          <%= render @cart %><br/>
+        </div>
+      <% end %>
       <div id="datetime"><%= time_tag Time.now %></div>
       <ul>
         <li><a href="home">Home</a></li>
