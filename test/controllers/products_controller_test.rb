@@ -3,6 +3,7 @@ require 'test_helper'
 class ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
+    @foo = products(:foo)
     @update = {
       title: 'Foo',
       description: 'More Foo For You',
@@ -40,13 +41,23 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should show product" do
-    get :show, id: @product
+    get :show, id: @foo
     assert_response :success
+
+    assert_select "#main p", /PTD Foo/   #title
+    assert_select "#main p", /Mr T says PDT Foo/  #description
+    assert_select "#main p", /foo\.png/  #image
+    assert_select "#main p", /0?\.10?/   #price
   end
 
   test "should get edit" do
     get :edit, id: @product
     assert_response :success
+
+    assert_select "#product_title[value=?]", @product.title
+    assert_select "#product_description", /MyText/
+    assert_select "#product_image_url[value=?]", @product.image_url
+    assert_select "#product_price[value=?]", @product.price.to_s
   end
 
   test "should update product" do
