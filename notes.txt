@@ -14,3 +14,8 @@ CH11:
 
   when adding functionality like the image click coffeescript it's
   a good idea to also add controller tests to ensure that the required markup (ids, classes, etc) are present.  
+
+  Exercise 1: done
+  Exercise 2: postponed
+
+CH12:

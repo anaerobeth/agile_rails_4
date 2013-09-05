@@ -1,5 +1,5 @@
 $('#cart').html("<%= escape_javascript render(@cart) %>");
 
-if( $('#cart tr').length == 2 ) { $('#cart').show('blind', 1000); }
+if( $('#cart tr').not('.total_line').length == 1 && $('#cart').css('display') == 'none') { $('#cart').show('blind', 200); }
 
 $('#current_item').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
