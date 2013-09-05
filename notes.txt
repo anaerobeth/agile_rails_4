@@ -7,3 +7,8 @@ CH11:
   CoffeeScript and TurboLinks events
   http://jashkenas.github.com/coffee-script/
   https://github.com/rails/turbolinks/blob/master/README.md#turbolinks
+
+  read more about AJAX testing with xhr and assert_select_jquery
+
+  when adding functionality like the image click coffeescript it's
+  a good idea to also add controller tests to ensure that the required markup (ids, classes, etc) are present.  

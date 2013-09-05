@@ -11,4 +11,11 @@ class StoreControllerTest < ActionController::TestCase
     #remember these come from the test fixture, not the dev db
   end
 
+  #3 store entry images and 3 entry submit buttons
+  test "markup needed for store.js.coffee is present" do
+    get :index
+    assert_select '.store .entry > img', 3
+    assert_select '.entry input[type=submit]', 3
+  end
+
 end
