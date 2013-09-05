@@ -47,4 +47,19 @@ class CartsControllerTest < ActionController::TestCase
 
     assert_redirected_to store_path
   end
+
+  test "should destroy cart via ajax" do
+    assert_difference('Cart.count', -1) do
+      session[:cart_id] = @cart.id
+      xhr :delete, :destroy, id: @cart
+    end
+
+    assert_response :success
+    
+    #log = Logger.new(STDOUT)
+    #log.info response.body
+    #Uncomment these two lines to dump the response to stdout, just to examine it.
+
+    #not sure what else to test for since it just returns some jquery
+  end
 end
