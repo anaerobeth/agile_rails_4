@@ -2,7 +2,9 @@ Chapter notes and summaries
 
 
 CH11:
-  (partial notes - go back and fill me in)
+  Partials and AJAX
+  JQuery to manipulate HTML in the browser
+  Helper methods
 
   CoffeeScript and TurboLinks events
   http://jashkenas.github.com/coffee-script/
