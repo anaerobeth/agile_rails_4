@@ -1,0 +1,9 @@
+Chapter notes and summaries
+
+
+CH11:
+  (partial notes - go back and fill me in)
+
+  CoffeeScript and TurboLinks events
+  http://jashkenas.github.com/coffee-script/
+  https://github.com/rails/turbolinks/blob/master/README.md#turbolinks
