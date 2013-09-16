@@ -1,3 +1,5 @@
+$('#notice').hide()
+
 $('#cart').html("<%= escape_javascript render(@cart) %>");
 
 if( $('#cart tr').not('.total_line').length == 1 && $('#cart').css('display') == 'none') { $('#cart').show('blind', 200); }
